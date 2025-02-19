@@ -1,5 +1,6 @@
 package com.nexora.modal;
 
+import com.nexora.domain.AccountStatus;
 import com.nexora.domain.USER_ROLE;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -32,6 +33,7 @@ public class Seller {
 
     @Embedded
     private BankDetails bankDetails = new BankDetails();
+
 
     @OneToOne(cascade = CascadeType.ALL)
     private Address pickuoAddress = new Address();
